@@ -25,7 +25,7 @@ social: true # includes social icons at the bottom of the page
   # limit: 3 # leave blank to include all the blog posts
 ---
 
-Aerospace engineer in training with a passion for propulsion, aerodynamics and defence systems, currently on placement at Martin-Baker Aircraft, the world leader in ejection seat technology, where I contribute to safety-critical systems that have saved over 7,700 lives.
+Aerospace engineer in training with a passion for propulsion, aerodynamics and defence systems, currently on placement at Martin-Baker Aircraft, the world leader in ejection seat technology, where I contribute to safety-critical systems that have saved over 7,800 lives.
 
 
 Alongside my MEng at Queen’s University Belfast, I’ve been a core member of Queen’s Propulsion Laboratory (QPL) since my first year, serving as CFD Engineer, running aerodynamic simulations and design optimisation for student-built rockets, while also holding the role of Secretary from August 2024 to 2025.
