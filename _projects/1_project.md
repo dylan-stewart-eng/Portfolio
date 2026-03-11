@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 1
+title: Computational ANalysis of a Mach 2.2 Multi-Ramp External Compression Intake for Ramjet Integration
 description: with background image
 img: assets/img/12.jpg
 importance: 1
