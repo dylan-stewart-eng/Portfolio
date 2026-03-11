@@ -481,7 +481,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/Portfolio/assets/pdf/Curriculum%20Vitae%20(181225)", "_blank");
+          window.open("/Portfolio/assets/pdf/cv.pdf", "_blank");
         },
       },{
         id: 'social-email',
