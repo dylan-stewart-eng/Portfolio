@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='#'>Affiliations</a>. MEng Aerospace Engineering, Belfast
 
 profile:
   align: right
@@ -24,17 +24,10 @@ social: true # includes social icons at the bottom of the page
   # scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   # limit: 3 # leave blank to include all the blog posts
 ---
+MEng Aerospace Engineering student at Queen's University Belfast, currently on placement at Martin-Baker Aircraft — the world leader in ejection seat technology, whose systems have saved over 7,800 lives. My work there focuses on safety-critical mechanical design, working with data analysis tools and stakeholder-facing reporting to drive process improvements.
 
-Aerospace engineer in training with a passion for propulsion, aerodynamics and defence systems, currently on placement at Martin-Baker Aircraft, the world leader in ejection seat technology, where I contribute to safety-critical systems that have saved over 7,800 lives.
+Outside of placement, I'm a founding member of Queen's Propulsion Laboratory (QPL), where I run aerodynamic and vibrational CFD simulations in ANSYS Fluent and SolidWorks to optimise rocket geometry. I also served as Society Secretary from 2024–2025, helping grow QPL to 65+ members across competitive rocketry teams.
 
+I'm drawn to aerospace roles where engineering has real consequences — whether that's a rocket leaving the atmosphere or an ejection seat performing flawlessly under pressure. Long-term, I'm building toward a career in UK defence aerospace with companies like Martin-Baker, BAE Systems, or MBDA.
 
-Alongside my MEng at Queen’s University Belfast, I’ve been a core member of Queen’s Propulsion Laboratory (QPL) since my first year, serving as CFD Engineer, running aerodynamic simulations and design optimisation for student-built rockets, while also holding the role of Secretary from August 2024 to 2025.
-
-
-I’m drawn to roles where engineering has real consequences, whether that’s a rocket leaving the atmosphere or an ejection seat performing flawlessly under pressure.
-
-
-Long-term, I’m aiming to build a career in UK defence aerospace with companies like Martin-Baker, BAE Systems or MBDA.
-
-
-Good engineering saves lives. That’s what gets me out of bed.
+Good engineering saves lives. That's what drives everything I do.
