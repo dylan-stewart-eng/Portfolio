@@ -409,8 +409,8 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
+          section: "News",},{id: "projects-computational-analysis-of-a-mach-2-2-multi-ramp-external-compression-intake-for-ramjet-integration",
+          title: 'Computational ANalysis of a Mach 2.2 Multi-Ramp External Compression Intake for Ramjet Integration...',
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio/projects/1_project/";
