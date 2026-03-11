@@ -1,40 +1,38 @@
 cv:
   name: Dylan Stewart
-  label: Engineer
+  label: Aerospace Engineering Student
   email: dylanstewart955@gmail.com
-  location: Belfast, Northern Ireland
+  location: Belfast, UK
   image: ""
-  summary: 
+  summary: Aerospace engineering student with hands-on experience in CFD, control systems, and experimental rocketry. Skilled in SolidWorks, MATLAB, Arduino, and OpenRocket. Applied CFD to reduce aerodynamic drag and structural risk in rocket components. Designed and tested embedded stability systems for student-led aerospace projects. Seeking technical roles in aerodynamics, simulation, or flight systems.
 
   social_networks:
-    - network: 
-      username: 
-    - network: GitHub
-      username: dylan-stewart-eng
     - network: LinkedIn
       username: dylanstewart20
+    - network: GitHub
+      username: dylan-stewart-eng
 
   address:
-    street: 
-    city: 
-    region: 
+    street:
+    city: Belfast
+    region: Northern Ireland
     postalCode:
-    countryCode:
+    countryCode: GB
 
   sections:
     Education:
-      - institution: Queens Univerity Belfast
+      - institution: Queen's University Belfast
         location: Belfast, Northern Ireland
         url: https://www.qub.ac.uk/
         area: Aerospace Engineering
-        studyType: Masters of Engineering
-        start_date: 2023
-        end_date: 2028
+        studyType: Master of Engineering (MEng)
+        start_date: 2023-09
+        end_date: 2028-06
         score: ""
-        courses: ""
         highlights:
-          - Description 1.
-          - Description 2.
+          - Modules include Compressible Flow and Propulsion, Aerodynamics and Aircraft Design.
+          - Applied systems engineering to aircraft design with formal PDR and CDR documentation.
+          - Created Arduino-based control system and analysed response.
 
       - institution: Banbridge Academy
         location: Banbridge, Northern Ireland
@@ -44,144 +42,80 @@ cv:
         end_date: 2023
         score: "B, B, A*"
         highlights:
-          - Description 1.
-          - Description 2.
 
     Experience:
       - company: Martin-Baker Aircraft Company Ltd.
         position: Assistant Mechanical Design Engineer
         location: Greater London Area, UK
-        start_date: 2025
-        end_date: 2026
-        summary: Placement year that I took between my 2nd and 3rd stage of university
+        start_date: 2025-08-04
+        end_date: 2026-08-09
+        summary: Placement year undertaken between 2nd and 3rd year of university as part of the Engineering Leadership Program.
         highlights:
-          - Relativity
-          - Description 2.
+          - Investigated safety issue reports and presented data-driven reasoning for containment, corrective, and preventative measures to stakeholders.
+          - Utilised data analysis tools (e.g., Excel VBA, Power Apps) to track and report on project progress, contributing to process improvements and workflow automation.
 
       - company: Tesco plc.
-        position: Customer Assistant
+        position: Retail Sales Assistant
         location: Down, Northern Ireland
-        start_date: 2022
-        end_date: 2025
+        start_date: 2022-10-15
+        end_date: 2025-07-19
         highlights:
-          - Description 1.
-          - Description 2.
+          - Responsible for product security, shrinkage audits, and technical merchandise knowledge.
 
-      - company: National Windscreens
+      - company: National Windscreens Ltd.
         position: Assistant Mechanic
         location: Belfast, Northern Ireland
         start_date: 2021
         end_date: 2022
-        summary: Worked over the summer of 2021 and 2022
+        summary: Worked over the summer of 2021 and 2022.
+        highlights:
+          - Supported windscreen repairs, including regular and safety glass, as well as government contracts.
+          - Assisted in vehicle diagnostics using tools such as ECU scanners to identify faults in the system.
 
-    Volunteer:
-      - company: Queens Propulsion Laboratory
-        position: Computational Fluid Dynamics Engineer
-        location: Belfast, Northern Ireland
-        start_date: 2023-10-15
+    Projects:
+      - name: Queen's Propulsion Laboratory – CFD Engineer
+        summary: Student-led rocketry society at Queen's University Belfast focused on designing, building, and launching rockets and rocket engines.
+        start_date: 2023-10
         end_date: Present
-        summary: CFD Engineer at Queen’s Propulsion Laboratory (QPL) — a student-led rocketry society at Queen’s University Belfast focused on designing, building, and launching rockets and rocket engines.
-                  • Used ANSYS Fluent and SolidWorks to simulate aerodynamic behaviour and optimise rocket body and fin geometries for target altitude performance
-                  • Contributed to a small cross-disciplinary team spanning structures and aerodynamics
         highlights:
+          - Performed aerodynamic analysis to reduce drag and optimise FinCan as well as nose cone geometry.
+          - Conducted harmonic and vibrational analysis to reduce the risk of flight-critical failures.
 
-      - company: Queens Propulsion Laboratory
-        position: Society Secretary
-        location: Belfast, Northern Ireland
-        start_date: 2024-08-01
-        end_date: 2025-07-31
-        summary: Elected as Secretary of Queen’s Propulsion Laboratory, managing organisational operations alongside my technical CFD role.
-                  • Coordinated communication between competition teams and the executive committee
-                  • Supported event planning, meeting coordination, and administrative operations for a growing student engineering society
-                  • Helped scale society operations during a period of increased membership and competition activity
+      - name: Queen's Propulsion Laboratory – Secretary
+        summary: Elected as Secretary of Queen's Propulsion Laboratory, managing organisational operations alongside technical CFD role.
+        start_date: 2024-08
+        end_date: 2025-08
         highlights:
+          - Managed recruitment and member selection for competition teams (65+ members).
+          - Oversaw transaction approvals and maintained accurate records of all society meetings.
 
-    #Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
-    #Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+    Professional Development:
+      - title: Engineering Leadership Program
+        awarder: Queen's University Belfast
+        date: 2024-07
+        summary: Selected as one of 10 participants from an applicant pool of ~80, following success in application, assessment centre, and formal presentation stages. Chosen by top-ranked company Martin-Baker for a competitive engineering placement year. Participated in workshops held by industry leaders on leadership topics.
 
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: CAD & Simulation
+        level: Proficient
+        icon: fa-solid fa-drafting-compass
+        keywords: "SolidWorks, MATLAB, Simulink, OpenRocket, RASAero II"
+
+      - name: Electronics & PCB Design
+        level: Proficient
+        icon: fa-solid fa-microchip
+        keywords: "KiCad, EAGLE, Arduino"
+
+      - name: Programming
+        level: Proficient
+        icon: fa-solid fa-code
+        keywords: "C++, C, Python, MATLAB, Arduino"
 
     Languages:
       - name: English
         summary: "Native Speaker"
 
     Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    #References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Aerospace Engineering
+        icon: fa-solid fa-rocket
+        keywords: "Aerodynamics, Propulsion, CFD, Flight Systems, Rocketry"
