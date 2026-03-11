@@ -400,8 +400,8 @@ ninja.data = [{
             window.location.href = "/Portfolio/blog/2015/formatting-and-links/";
           
         },
-      },{id: "books-surrounded-by-idiots",
-          title: 'Surrounded By Idiots',
+      },{id: "books-atomic-habits",
+          title: 'Atomic Habits',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/Portfolio/books/Atomic%20Habits/";
