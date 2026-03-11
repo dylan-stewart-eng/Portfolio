@@ -27,7 +27,7 @@ cv:
         location: Belfast, Northern Ireland
         url: https://www.qub.ac.uk/
         area: Aerospace Engineering
-        studyType: MEng
+        studyType: Masters of Engineering
         start_date: 2023
         end_date: 2028
         score: ""
@@ -51,46 +51,52 @@ cv:
       - company: Martin-Baker Aircraft Company Ltd.
         position: Assistant Mechanical Design Engineer
         location: Greater London Area, UK
-        start_date: August 2025
-        end_date: August 2026
+        start_date: 2025
+        end_date: 2026
         summary: Placement year that I took between my 2nd and 3rd stage of university
         highlights:
           - Relativity
           - Description 2.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Tesco plc.
+        position: Customer Assistant
+        location: Down, Northern Ireland
+        start_date: 2022
+        end_date: 2025
         highlights:
           - Description 1.
           - Description 2.
 
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
+      - company: National Windscreens
+        position: Assistant Mechanic
+        location: Belfast, Northern Ireland
+        start_date: 2021
+        end_date: 2022
+        summary: Worked over the summer of 2021 and 2022
 
     Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: Queens Propulsion Laboratory
+        position: Computational Fluid Dynamics Engineer
+        location: Belfast, Northern Ireland
+        start_date: 2023-10-15
+        end_date: Present
+        summary: CFD Engineer at Queen’s Propulsion Laboratory (QPL) — a student-led rocketry society at Queen’s University Belfast focused on designing, building, and launching rockets and rocket engines.
+                  • Used ANSYS Fluent and SolidWorks to simulate aerodynamic behaviour and optimise rocket body and fin geometries for target altitude performance
+                  • Contributed to a small cross-disciplinary team spanning structures and aerodynamics
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
 
-    Awards:
+      - company: Queens Propulsion Laboratory
+        position: Society Secretary
+        location: Belfast, Northern Ireland
+        start_date: 2024-08-01
+        end_date: 2025-07-31
+        summary: Elected as Secretary of Queen’s Propulsion Laboratory, managing organisational operations alongside my technical CFD role.
+                  • Coordinated communication between competition teams and the executive committee
+                  • Supported event planning, meeting coordination, and administrative operations for a growing student engineering society
+                  • Helped scale society operations during a period of increased membership and competition activity
+        highlights:
+
+    #Awards:
       - title: Nobel Prize in Physics
         authors:
           - "Royal Swedish Academy of Sciences"
@@ -106,7 +112,7 @@ cv:
         awarder: German Physical Society
         summary: Awarded for outstanding scientific achievement
 
-    Publications:
+    #Publications:
       - title: Zur Elektrodynamik bewegter Körper
         authors:
           - Albert Einstein
@@ -138,11 +144,8 @@ cv:
         keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
     Languages:
-      - name: German
-        summary: "Native speaker"
-
       - name: English
-        summary: "Fluent"
+        summary: "Native Speaker"
 
     Interests:
       - name: Physics
@@ -174,7 +177,7 @@ cv:
         start_date: 2018-01-01
         end_date: 2018-01-01
 
-    References:
+    #References:
       - name: Professor John Doe
         icon: fa-solid fa-laptop
         reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
