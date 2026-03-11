@@ -404,6 +404,11 @@ ninja.data = [{
           title: 'Surrounded By Idiots',
           description: "",
           section: "Books",handler: () => {
+              window.location.href = "/Portfolio/books/Atomic%20Habits/";
+            },},{id: "books-surrounded-by-idiots",
+          title: 'Surrounded By Idiots',
+          description: "",
+          section: "Books",handler: () => {
               window.location.href = "/Portfolio/books/the_godfather/";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
