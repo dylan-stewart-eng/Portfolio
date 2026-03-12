@@ -426,8 +426,8 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
+            },},{id: "projects-active-aerodynamics-for-use-in-an-actively-stable-amateur-rocket",
+          title: 'Active Aerodynamics for Use in an Actively Stable Amateur Rocket',
           description: "a project with a background image and giscus comments",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio/projects/2_project/";
