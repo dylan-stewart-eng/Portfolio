@@ -4,7 +4,7 @@ title: project Grid Fin Aerodynamics
 description: a project that redirects to another website
 img: assets/img/project3.jpg
 redirect: https://unsplash.com
-importance: 3
+importance: 1
 category: work
 ---
 
