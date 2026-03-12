@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 3 with very long name
+title: project Grid Fin Aerodynamics
 description: a project that redirects to another website
-img: assets/img/7.jpg
+img: assets/img/project3.jpg
 redirect: https://unsplash.com
 importance: 3
 category: work
