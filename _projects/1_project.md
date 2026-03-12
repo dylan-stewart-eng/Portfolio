@@ -2,7 +2,7 @@
 layout: page
 title: Computational Analysis of a Mach 4 Multi-Ramp External Compression Intake for Ramjet Integration
 description: with background image
-img: assets/img/project1.jpg
+img: assets/img/Project1.jpg
 importance: 1
 category: work
 related_publications: false
