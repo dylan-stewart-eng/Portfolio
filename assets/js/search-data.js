@@ -431,8 +431,8 @@ ninja.data = [{
           description: "a project with a background image and giscus comments",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
+            },},{id: "projects-project-grid-fin-aerodynamics",
+          title: 'project Grid Fin Aerodynamics',
           description: "a project that redirects to another website",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio/projects/3_project/";
