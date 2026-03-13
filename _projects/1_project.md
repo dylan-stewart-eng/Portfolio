@@ -2,7 +2,7 @@
 layout: page
 title: Computational Analysis of a Mach 4 Multi-Ramp External Compression Intake for Ramjet Integration
 description: Analytical design and ANSYS Fluent CFD validation of a three-ramp mixed-compression supersonic intake at Mach 4.0 and 15,000 m altitude.
-img: assets/img/Project1.jpg
+img: assets/img/mach_contour.png
 importance: 1
 category: work
 related_publications: false
