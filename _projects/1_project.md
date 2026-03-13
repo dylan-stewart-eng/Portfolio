@@ -8,15 +8,15 @@ category: work
 related_publications: false
 ---
 
-At Mach 4, you can't just ram air into an engine and hope for the best. The intake has to do something clever first — a series of oblique shocks that progressively squeeze the flow down from supersonic to subsonic before it even reaches the combustor. Do it badly and you lose most of your total pressure before combustion ever starts. Do it well and you've got an efficient, controllable compression system that keeps the engine alive.
+At Mach 4, you can't just ram air into an engine and hope for the best. The intake has to do something clever first - a series of oblique shocks that progressively squeeze the flow down from supersonic to subsonic before it even reaches the combustor. Do it badly and you lose most of your total pressure before combustion ever starts. Do it well and you've got an efficient, controllable compression system that keeps the engine alive.
 
-This project covers the full design and CFD validation of a three-ramp mixed-compression intake designed at an altitude of **15,000 m** or **50,000 ft) at **Mach 4.0**.
+This project covers the full design and CFD validation of a three-ramp mixed-compression intake designed at an altitude of **15,000 m** (or **50,000 ft**) at **Mach 4.0**.
 
 ---
 
 ## The Design Problem
 
-A single normal shock at Mach 4 gives you a total pressure recovery (TPR) of about **0.14** — meaning you've thrown away 86% of the energy in your incoming flow before the engine sees it. That's essentially useless.
+A single normal shock at Mach 4 gives you a Total Pressure Recovery (TPR) of about **0.14** - meaning you've thrown away 86% of the energy in your incoming flow before the engine sees it. That's essentially useless.
 
 The fix is to use oblique shocks instead. Each ramp deflects the flow slightly, producing a weaker shock with much lower losses. Chain enough of them together and you can arrive at a subsonic Aerodynamic Interface Plane (AIP) with dramatically better pressure recovery.
 
@@ -67,7 +67,7 @@ The 2D geometry was imported into **ANSYS Fluent 2026 R1** and simulated with:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/total_pressure.ong" title="Total pressure contour" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/total_pressure.png" title="Total pressure contour" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/wall_pressure2.png" title="Wall pressure distribution" class="img-fluid rounded z-depth-1" %}
@@ -89,7 +89,7 @@ The 2D geometry was imported into **ANSYS Fluent 2026 R1** and simulated with:
 
 The CFD result comes in 3.2% below the analytical prediction, which is unnervingly close. The oblique shock theory is inviscid; it doesn't account for the turbulent boundary layer building up along the ramp surfaces. The total pressure contour makes this clear — there's a distinct low-P₀ wake clinging to the walls, which is the viscous loss the theory can't see.
 
-The shock positions in the Mach contour land where the MATLAB geometry predicted them, which is a nice spatial validation of the whole workflow from analytical design through to SolidWorks geometry to CFD mesh.
+The shock positions in the Mach contour land close to where MATLAB predicted them, which is a nice spatial validation of the whole workflow from analytical design through to SolidWorks geometry to CFD mesh. However, this can be improved in future by extendng the cowl to catch the intersection of these shocks and hopefully, provide a slightly more efficient intake. Following on from that, the introduction of bleed air channels to remove low pressure, viscous, "dirty" air could increase the efficiency once more. I plan to incorporate these changes soon!
 
 ---
 
@@ -100,3 +100,7 @@ A **mesh independence study** is planned at ~500,000 cells (currently constraine
 ---
 
 **Tools:** MATLAB · SolidWorks · ANSYS Fluent 2026 R1 · k-ω SST · Roe-FDS
+
+---
+**Disclaimer:**
+Portions of this work were completed with the assistance of Claude (Anthropic), an AI language model. AI tools were used to support tasks including document reformatting, code debugging, and write-up drafting. All technical decisions; including intake geometry, ramp angle selection, CFD setup, boundary conditions, and interpretation of results, were made independently by the myself. All AI assisted or generated content was reviewed, verified, and edited for technical accuracy prior to inclusion.
