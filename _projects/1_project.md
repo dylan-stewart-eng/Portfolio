@@ -1,81 +1,102 @@
 ---
 layout: page
 title: Computational Analysis of a Mach 4 Multi-Ramp External Compression Intake for Ramjet Integration
-description: with background image
+description: Analytical design and ANSYS Fluent CFD validation of a three-ramp mixed-compression supersonic intake at Mach 4.0 and 15,000 m altitude.
 img: assets/img/Project1.jpg
 importance: 1
 category: work
 related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+At Mach 4, you can't just ram air into an engine and hope for the best. The intake has to do something clever first — a series of oblique shocks that progressively squeeze the flow down from supersonic to subsonic before it even reaches the combustor. Do it badly and you lose most of your total pressure before combustion ever starts. Do it well and you've got an efficient, controllable compression system that keeps the engine alive.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project covers the full design and CFD validation of a three-ramp mixed-compression intake designed at an altitude of **15,000 m** or **50,000 ft) at **Mach 4.0**.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
+
+## The Design Problem
+
+A single normal shock at Mach 4 gives you a total pressure recovery (TPR) of about **0.14** — meaning you've thrown away 86% of the energy in your incoming flow before the engine sees it. That's essentially useless.
+
+The fix is to use oblique shocks instead. Each ramp deflects the flow slightly, producing a weaker shock with much lower losses. Chain enough of them together and you can arrive at a subsonic Aerodynamic Interface Plane (AIP) with dramatically better pressure recovery.
+
+The challenge is picking the right ramp angles. Too shallow and you're not compressing efficiently. Too steep and the shock detaches and thus, the whole compression system falls apart.
+
+---
+
+## Analytical Design
+
+I ran a parametric sweep in **MATLAB** using the θ-β-M (theta-beta-Mach) oblique shock relations, solving iteratively for each ramp in the compression train. For Mach 4.0, the shock detachment limit on the third ramp sits at **39°**, so the optimisation finds the angle combination that maximises TPR while keeping a margin below that limit.
+
+The optimal three-ramp configuration:
+
+| Ramp | Deflection θ | Shock Angle β | Downstream Mach |
+|------|-------------|---------------|-----------------|
+| 1    | 10.0°       | 22.23°        | 3.288           |
+| 2    | 22.5°       | 27.86°        | 2.599           |
+| 3    | 38.0°       | 36.36°        | —               |
+| Terminal (normal) | — | 90.0° | subsonic |
+
+**Analytical TPR: 0.587** —> compared to 0.14 for a single normal shock. That's a significant improvement just from a change in intake geometry.
+
+The intake geometry was built in **SolidWorks** from sequential shock intersection coordinates derived in MATLAB, realistic throat height of ~59.7 mm.
+
+---
+
+## CFD Simulation
+
+The 2D geometry was imported into **ANSYS Fluent 2026 R1** and simulated with:
+
+- **Density-based solver** (appropriate for compressible, high-speed flows)
+- **k-ω SST turbulence model** — the standard choice for aerospace CFD, particularly good near adverse pressure gradient boundary layers on the ramp surfaces
+- **Roe-FDS flux scheme** for accurate shock capturing
+- Courant number of 0.5 for stability
+- Pressure far-field boundaries at M=4.0, P=12,112 Pa, T=216.65 K (ISA at 15,000 m)
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/mach_contour.jpg" title="Mach number contour" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/static_pressure.jpg" title="Static pressure contour" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Left: Mach number contour showing three distinct oblique shocks and the terminal normal shock near the cowl lip. Right: Static pressure distribution — the stepwise pressure rise across each shock is clearly visible.
 </div>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/total_pressure.jpg" title="Total pressure contour" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/wall_pressure.jpg" title="Wall pressure distribution" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Left: Total pressure contour, loss concentrated in the shock structures and the turbulent boundary layer on the ramp surfaces. Right: Static Pressure (Pa) along the ramps, with step increases at the three shock impingement locations.
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+## Results
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+| Metric | Analytical | CFD | Difference |
+|--------|-----------|-----|------------|
+| Freestream P₀ (Pa) | 1,839,000 | 1,843,087 | +0.2% |
+| AIP P₀ (Pa) | 1,079,433 | 1,045,858 | — |
+| **TPR** | **0.587** | **0.568** | **−3.2%** |
 
-{% raw %}
+The CFD result comes in 3.2% below the analytical prediction, which is unnervingly close. The oblique shock theory is inviscid; it doesn't account for the turbulent boundary layer building up along the ramp surfaces. The total pressure contour makes this clear — there's a distinct low-P₀ wake clinging to the walls, which is the viscous loss the theory can't see.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+The shock positions in the Mach contour land where the MATLAB geometry predicted them, which is a nice spatial validation of the whole workflow from analytical design through to SolidWorks geometry to CFD mesh.
 
-{% endraw %}
+---
+
+## What's Next
+
+A **mesh independence study** is planned at ~500,000 cells (currently constrained to 512k under the ANSYS Student Edition). After that, the natural follow-on is a **transient simulation** to investigate buzz instability — the self-excited shock oscillation that can occur at off-design conditions, which is a critical operability concern for ramjet intakes.
+
+---
+
+**Tools:** MATLAB · SolidWorks · ANSYS Fluent 2026 R1 · k-ω SST · Roe-FDS
