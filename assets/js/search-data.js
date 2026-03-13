@@ -421,7 +421,7 @@ ninja.data = [{
               window.location.href = "/Portfolio/projects/1_project/";
             },},{id: "projects-active-aerodynamics-for-use-in-an-actively-stable-amateur-rocket",
           title: 'Active Aerodynamics for Use in an Actively Stable Amateur Rocket',
-          description: "a project with a background image and giscus comments",
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio/projects/2_project/";
             },},{id: "projects-project-grid-fin-aerodynamics",
