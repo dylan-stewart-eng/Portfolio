@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Active Aerodynamics for Use in an Actively Stable Amateur Rocket
-description: a project with a background image and giscus comments
+description:
 img: assets/img/project2.jpg
 importance: 2
 category: work
