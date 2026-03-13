@@ -2,11 +2,11 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. MEng Aerospace Engineering, Belfast
+subtitle: MEng Aerospace Engineering, Belfast
 
 profile:
   align: right
-  image: pfp.jpg
+  image: pfp.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Belfast, Northern Ireland</p>
