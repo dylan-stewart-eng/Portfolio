@@ -416,7 +416,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-computational-analysis-of-a-mach-4-multi-ramp-external-compression-intake-for-ramjet-integration",
           title: 'Computational Analysis of a Mach 4 Multi-Ramp External Compression Intake for Ramjet Integration...',
-          description: "with background image",
+          description: "Analytical design and ANSYS Fluent CFD validation of a three-ramp mixed-compression supersonic intake at Mach 4.0 and 15,000 m altitude.",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio/projects/1_project/";
             },},{id: "projects-active-aerodynamics-for-use-in-an-actively-stable-amateur-rocket",
