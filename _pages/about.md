@@ -6,7 +6,7 @@ subtitle: <a href='#'>Affiliations</a>. MEng Aerospace Engineering, Belfast
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: pfp.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Belfast, Northern Ireland</p>
