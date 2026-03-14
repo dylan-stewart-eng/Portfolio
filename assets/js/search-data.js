@@ -412,9 +412,9 @@ ninja.data = [{
           description: "Analytical design and ANSYS Fluent CFD validation of a three-ramp mixed-compression supersonic intake at Mach 4.0 and 15,000 m altitude.",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio/projects/1_project/";
-            },},{id: "projects-active-aerodynamics-for-use-in-an-actively-stable-amateur-rocket",
-          title: 'Active Aerodynamics for Use in an Actively Stable Amateur Rocket',
-          description: "",
+            },},{id: "projects-active-aerodynamics-for-an-actively-stable-amateur-rocket",
+          title: 'Active Aerodynamics for an Actively Stable Amateur Rocket',
+          description: "IMU-driven canard control system with Kalman filter attitude estimation for active roll and pitch stabilisation during flight.",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio/projects/2_project/";
             },},{id: "projects-grid-fin-aerodynamics",
