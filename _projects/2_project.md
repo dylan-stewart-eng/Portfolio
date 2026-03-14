@@ -1,81 +1,73 @@
 ---
 layout: page
-title: Active Aerodynamics for Use in an Actively Stable Amateur Rocket
-description:
+title: Active Aerodynamics for an Actively Stable Amateur Rocket
+description: IMU-driven canard control system with Kalman filter attitude estimation for active roll and pitch stabilisation during flight.
 img: assets/img/project2.jpg
 importance: 2
 category: work
-giscus_comments: true
+giscus_comments: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Most amateur rockets are passively stable — fixed fins keep them pointed the right way through geometry alone. This project takes a different approach: an active canard system that continuously reads the rocket's attitude and deflects four control surfaces in real time to correct deviations during flight. Think of it as a very lightweight, very fast autopilot built around a £5 IMU and an Arduino.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+---
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## The Problem with Passive Stability
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Passive stability works, but it comes with a trade-off — the further back your centre of pressure sits relative to your centre of mass, the more stable the rocket is, but the less responsive it is to thrust vectoring or intentional manoeuvring. For my actively stable rocket concept, we want tighter attitude control throughout the flight envelope, which means closing the loop with real sensor feedback. This, in theory, should allow the rocket to stay stable in all sorts of wind conditions.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+## Sensor Fusion — Why a Kalman Filter
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+The core challenge is getting a clean, reliable angle estimate from an MPU6050 IMU. The sensor gives you two sources of information:
 
-{% raw %}
+- **Accelerometer** — good absolute angle reference, but noisy (especially on a vibrating rocket airframe)
+- **Gyroscope** — smooth rate data, but drifts over time due to bias
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
+Neither is useful on its own. A **Kalman filter** fuses both optimally — using the gyro to propagate the angle estimate between measurements, while continuously correcting for gyro bias using the accelerometer as a reference. The result is a stable, low-latency angle estimate that handles both vibration noise and long-duration drift.
+
+The filter maintains a 2×2 error covariance matrix and tunes itself via three parameters:
+
+| Parameter | Value | Role |
+|-----------|-------|------|
+| Q_angle | 0.001 | Process noise — accelerometer trust |
+| Q_bias | 0.003 | Process noise — gyro bias drift rate |
+| R_measure | 0.03 | Measurement noise — sensor noise level |
+
+---
+
+## Control Logic
+
+Four servos drive the fins AoA, paired in opposition so that a positive pitch correction deflects surfaces 1 & 3 one way and surfaces 2 & 4 the other — producing a net moment without inducing roll. The filtered angle is mapped directly to servo position:
+
+```cpp
+int servoPos = map(filteredAngle, -90, 90, 0, 180);
+servo1.write(servoPos);       // paired
+servo3.write(servoPos);
+servo2.write(180 - servoPos); // opposing pair
+servo4.write(180 - servoPos);
 ```
 
-{% endraw %}
+The system runs on an Arduino with an MPU6050 over I²C, targeting a loop rate of ~200 Hz — fast enough to respond to attitude deviations well within the rocket's dynamic time constants.
+
+---
+
+## Current Status
+
+The Kalman filter and servo control logic are implemented and bench-tested. Next steps are:
+
+- SolidWorks design of the canard mount and actuator housing
+- Hardware integration and closed-loop bench testing with a gimbal rig
+- CFD analysis of canard aerodynamic effectiveness across the flight Mach range
+- Flight test on QPL's next rocket
+
+Images and CAD renders will be added as the hardware build progresses.
+
+---
+
+**Tools:** Arduino · C++ · MPU6050 IMU · SolidWorks (in progress) · ANSYS Fluent (planned)
+
+---
+**Disclaimer:**
+Portions of this write-up were completed with the assistance of Claude (Anthropic), an AI language model. All technical decisions, code architecture, and control system design were made independently by the author.
