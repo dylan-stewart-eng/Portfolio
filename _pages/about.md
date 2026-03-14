@@ -26,7 +26,7 @@ social: true # includes social icons at the bottom of the page
 ---
 MEng Aerospace Engineering student at Queen's University Belfast, currently on placement at Martin-Baker Aircraft — the world leader in ejection seat technology, whose systems have saved over 7,800 lives. My work there focuses on safety-critical mechanical design, working with data analysis tools and stakeholder-facing reporting to drive process improvements.
 
-Outside of placement, I'm a founding member of Queen's Propulsion Laboratory (QPL), where I run aerodynamic and vibrational CFD simulations in ANSYS Fluent and SolidWorks to optimise rocket geometry. I also served as Society Secretary from 2024–2025, helping grow QPL to 65+ members across competitive rocketry teams.
+Outside of placement, I'm a member of Queen's Propulsion Laboratory (QPL), where I run aerodynamic and vibrational CFD simulations in ANSYS Fluent and SolidWorks to optimise rocket geometry. I also served as Society Secretary from 2024–2025, helping grow QPL to 65+ members across competitive rocketry teams.
 
 I'm drawn to aerospace roles where engineering has real consequences — whether that's a rocket leaving the atmosphere or an ejection seat performing flawlessly under pressure. Long-term, I'm building toward a career in UK defence aerospace with companies like Martin-Baker, BAE Systems, or MBDA.
 
