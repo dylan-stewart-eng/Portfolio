@@ -4,6 +4,9 @@
 
 @use "variables" as v;
 
+body, p, h1, h2, h3, h4, h5, h6, li, span {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 p,
 h1,
 h2,
