@@ -30,4 +30,4 @@ Outside of placement, I'm a member of Queen's Propulsion Laboratory (QPL), where
 
 I'm drawn to aerospace roles where engineering has real consequences — whether that's a rocket leaving the atmosphere or an ejection seat performing flawlessly under pressure. Long-term, I'm building toward a career in UK defence aerospace with companies like Martin-Baker, BAE Systems, or MBDA.
 
-Good engineering saves lives and pushes boundries.
+Good engineering saves lives and pushes boundaries.
