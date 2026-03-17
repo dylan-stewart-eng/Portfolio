@@ -3,7 +3,7 @@ layout: page
 title: Grid Fin Aerodynamics
 description: a project that redirects to another website
 img: assets/img/project3.jpg
-importance: 1
+importance: 6
 category: work
 ---
 
