@@ -96,7 +96,7 @@ All outer boundaries (inlet, outlet, farfield) are set as **Pressure Far-Field**
 | 2.5 | — | Pending |
 | 3.0 | — | Pending |
 
-The trend at M1.5 and M2.0 is physically correct: Cd decreases as Mach increases above the transonic drag peak, consistent with oblique shock theory where wave drag coefficient falls as M rises. At M2.0, the drag breakdown is approximately wave drag ~0.22, base drag ~0.10, skin friction ~0.04 — total ≈ 0.36, which validates well against theoretical predictions for a 9.46° half-angle cone.
+The trend at M1.5 and M2.0 shows that the Cd increases as Mach increases above the transonic drag peak, consistent with oblique shock theory where wave drag coefficient falls as M rises. At M2.0, the drag breakdown is approximately wave drag ~0.22, base drag ~0.10, skin friction ~0.04 — total ≈ 0.36, which validates well against theoretical predictions for a 9.46° half-angle cone.
 
 The remaining four geometries (ogive, Von Kármán, power series, ellipse) will be simulated across the same Mach sweep once the conical baseline is complete.
 
