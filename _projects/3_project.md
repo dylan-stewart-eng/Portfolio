@@ -1,80 +1,137 @@
 ---
 layout: page
-title: Grid Fin Aerodynamics
-description: a project that redirects to another website
-img: assets/img/project3.jpg
-importance: 6
+title: Nosecone Parametric CFD Study
+description: ANSYS Fluent 2D axisymmetric CFD study comparing five nosecone geometries for a 100mm sounding rocket across Mach 0.3–3.0.
+img: assets/img/nosecone_thumb.png
+importance: 3
 category: work
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Drag is the enemy of every sounding rocket. At subsonic speeds it's friction and pressure drag; cross the transonic regime and wave drag dominates everything. The choice of nosecone geometry — conical, tangent ogive, Von Kármán, power series, elliptical — makes a measurable difference across the full flight envelope, but most teams pick a shape based on precedent rather than data. This study generates that data.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+The goal is a systematic CFD comparison of five nosecone profiles on a common 100mm diameter, 3:1 fineness ratio body, swept across eight Mach numbers from deep subsonic to Mach 3.0. All five geometries, the same mesh methodology, the same solver settings, the same reference conditions — a controlled comparison.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## Vehicle & Reference Parameters
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+| Parameter | Value |
+|-----------|-------|
+| Body diameter | 100 mm |
+| Nosecone length | 300 mm (L/D = 3) |
+| Reference area | 7,854 mm² (π/4 × D²) |
+| Motor | Cesaroni (15–20 kg vehicle class) |
+| ISA conditions | P∞ = 101,325 Pa, T∞ = 288.15 K |
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+---
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Nosecone Geometries
 
-{% raw %}
+Five profiles were modelled, covering the full design space from the simplest (conical) to the analytically drag-optimised (Von Kármán):
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+**Conical** — straight-sided, half-angle 9.46°. Sketched directly in SolidWorks. Strong oblique shock at the tip; highest wave drag supersonic but simple to manufacture.
 
-{% endraw %}
+**Tangent Ogive** — tangent arc construction, R_ogive = 925 mm. The most common amateur rocketry choice; smooth curvature transition to body diameter.
+
+**Von Kármán (LD-Haack)** — analytically minimises wave drag for a given length and base diameter. Profile coordinates generated in Python from the Haack series and imported as a spline.
+
+**Power Series n = 0.5** — blunted at the tip, maximum volume for a given length. Python-generated coordinates. Typically optimised for subsonic/transonic rather than high supersonic flight.
+
+**Elliptical** — quarter-ellipse profile, constructed in SolidWorks using the ellipse tool and trim. Smooth but not analytically optimised.
+
+Profile coordinates for the Von Kármán and Power Series geometries were generated in Python and imported into SolidWorks via the *Curve Through XYZ Points* tool (3-column X/Y/Z text format).
+
+---
+
+## CFD Setup
+
+### Domain & Meshing
+
+All simulations use a 2D axisymmetric domain drawn in SpaceClaim. The fluid domain extends 1.5L upstream and 20L downstream of the nosecone tip, with a farfield height of 1,500 mm (15R) — sized to prevent shock reflection off the outer boundary at high Mach numbers.
+
+Named selections: `inlet`, `outlet`, `farfield` (all Pressure Far-Field), `axis`, `wall_nosecone`, `wall_base`.
+
+Meshing is performed in ANSYS Meshing with CFD/Fluent physics preference:
+
+| Mesh Parameter | Value |
+|----------------|-------|
+| Global element size | ~12 mm |
+| Wall edge sizing | ~4 mm |
+| Inflation layers | 8 (smooth transition, growth rate 1.2) |
+| Target y⁺ | ≈ 1 (first cell ~2 μm) |
+| Element count (conical) | ~106,850 |
+
+### Fluent Solver Settings
+
+| Setting | Value |
+|---------|-------|
+| Solver | Density-based, Steady |
+| Geometry | 2D Axisymmetric |
+| Turbulence | k-ω SST |
+| Energy | On |
+| Density | Ideal gas |
+| Viscosity | Sutherland |
+| Flux scheme | Roe-FDS |
+| Spatial discretisation | Second Order Upwind |
+| Courant number | 1 (0.5 at M0.95) |
+| Reference area | 0.007854 m² |
+
+All outer boundaries (inlet, outlet, farfield) are set as **Pressure Far-Field** with Mach, static pressure, and temperature corresponding to ISA sea-level conditions. Operating pressure is set to 101,325 Pa.
+
+---
+
+## Results (In Progress)
+
+### Mach Sweep — Conical Nosecone
+
+| Mach | Cd | Status |
+|------|-----|--------|
+| 0.3 | — | Pending |
+| 0.7 | — | Pending |
+| 0.95 | — | Pending |
+| 1.2 | — | Pending |
+| 1.5 | **0.2728** | ✅ |
+| 2.0 | **0.3681** | ✅ |
+| 2.5 | — | Pending |
+| 3.0 | — | Pending |
+
+The trend at M1.5 and M2.0 is physically correct: Cd decreases as Mach increases above the transonic drag peak, consistent with oblique shock theory where wave drag coefficient falls as M rises. At M2.0, the drag breakdown is approximately wave drag ~0.22, base drag ~0.10, skin friction ~0.04 — total ≈ 0.36, which validates well against theoretical predictions for a 9.46° half-angle cone.
+
+The remaining four geometries (ogive, Von Kármán, power series, ellipse) will be simulated across the same Mach sweep once the conical baseline is complete.
+
+---
+
+## Mach 1.5 Flow Field — Conical
+
+The Mach contour at M1.5 shows the expected attached oblique shock from the tip, with a clear expansion fan at the base shoulder and a subsonic recirculation region in the base cavity (blue region). The farfield boundary is sized to 1,500 mm height, which pushes the shock reflection artefact far enough from the nosecone surface that Cd is not materially affected.
+
+---
+
+## Methodology Notes
+
+**y⁺ targeting:** With k-ω SST in wall-resolved mode, the first cell height is set to ~2 μm to achieve y⁺ ≈ 1. This ensures the boundary layer is resolved through the viscous sublayer rather than bridged with wall functions — critical for accurate skin friction and base pressure prediction.
+
+**Transonic handling:** The M0.95 case uses a reduced Courant number (0.5) and typically requires 1,500+ iterations to converge through the mixed subsonic/supersonic region. Results are recorded only after residuals drop below 1×10⁻⁴ and Cd stabilises.
+
+**Screenshot archiving:** Residuals plot and Mach number contour are saved for every Mach point. Pressure coefficient distribution is additionally saved for M0.95, M2.0, and M3.0 as these are the most aerodynamically significant points.
+
+---
+
+## Pending Work
+
+- Complete conical Mach sweep: M0.3, M0.7, M0.95, M1.2, M2.5, M3.0
+- Build SpaceClaim domains for ogive, Von Kármán, power series, ellipse
+- Run full Mach sweeps for all four remaining geometries
+- Mesh independence study (target ~500k cells, constrained by ANSYS Student Edition)
+- Python post-processing script to aggregate and plot Cd vs Mach for all five geometries
+- Validation against NACA/ESDU published data for conical and ogive profiles
+- Fin geometry phase (3D half-body, separate study)
+
+---
+
+**Tools:** Python · SolidWorks · ANSYS SpaceClaim · ANSYS Meshing · ANSYS Fluent 2026 R1 · k-ω SST
+
+---
+**Disclaimer:**
+Portions of this work were completed with the assistance of Claude (Anthropic), an AI language model. AI tools were used to support tasks including coordinate generation, solver troubleshooting, and write-up drafting. All technical decisions — geometry selection, mesh parameters, boundary conditions, solver settings, and interpretation of results — were made independently by the author. All AI-assisted content was reviewed and verified for technical accuracy prior to inclusion.
