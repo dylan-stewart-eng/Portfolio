@@ -417,9 +417,9 @@ ninja.data = [{
           description: "IMU-driven canard control system with Kalman filter attitude estimation for active roll and pitch stabilisation during flight.",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio/projects/2_project/";
-            },},{id: "projects-grid-fin-aerodynamics",
-          title: 'Grid Fin Aerodynamics',
-          description: "a project that redirects to another website",
+            },},{id: "projects-nosecone-parametric-cfd-study",
+          title: 'Nosecone Parametric CFD Study',
+          description: "ANSYS Fluent 2D axisymmetric CFD study comparing five nosecone geometries for a 100mm sounding rocket across Mach 0.3–3.0.",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio/projects/3_project/";
             },},{id: "projects-project-4",
