@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/Portfolio/projects/";
           },
+        },{id: "nav-cfd-methodology-amp-validation",
+          title: "CFD Methodology &amp; Validation",
+          description: "The reasoning behind solver choices, turbulence modelling, meshing strategy, and validation approaches used across my CFD projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/Portfolio/cfd-methodology/";
+          },
         },{id: "nav-curriculum-vitae",
           title: "Curriculum Vitae",
           description: "",
