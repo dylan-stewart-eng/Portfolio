@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: MEng Aerospace Engineering, Belfast
+subtitle: MEng Aerospace Engineering · Queen's University Belfast
 
 profile:
   align: right
