@@ -484,8 +484,15 @@ ninja.data = [{
           window.open("mailto:%64%79%6C%61%6E%73%74%65%77%61%72%74%39%35%35@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/dylan-stewart-eng", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/dylanstewart20", "_blank");
