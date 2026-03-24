@@ -2,7 +2,7 @@
 layout: page
 title: Nosecone Parametric CFD Study
 description: ANSYS Fluent 2D axisymmetric CFD study comparing five nosecone geometries for a 100mm sounding rocket across Mach 0.3–3.0.
-img: assets/img/nosecone_thumb.png
+img: assets/img/nosecone/conical/M0_95_staticpressure.png
 importance: 3
 category: work
 related_publications: false
