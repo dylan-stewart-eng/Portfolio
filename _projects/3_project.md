@@ -109,13 +109,13 @@ The transonic jump between Mach 0.7 and Mach 1.2 is the steepest gradient in the
  
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_3_mach.png" title="Mach contour at M0.3" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_3_mach.png" title="Mach contour at M0.3" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_3_staticpressure.png" title="Static pressure at M0.3" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_3_staticpressure.png" title="Static pressure at M0.3" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_3_drag.png" title="Cd convergence at M0.3" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_3_drag.png" title="Cd convergence at M0.3" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -126,13 +126,13 @@ The transonic jump between Mach 0.7 and Mach 1.2 is the steepest gradient in the
  
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_95_mach.png" title="Mach contour at M0.95" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_95_mach.png" title="Mach contour at M0.95" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_95_staticpressure.png" title="Static pressure at M0.95" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_95_staticpressure.png" title="Static pressure at M0.95" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_95_drag.png" title="Cd convergence at M0.95" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M0_95_drag.png" title="Cd convergence at M0.95" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -143,13 +143,13 @@ The transonic jump between Mach 0.7 and Mach 1.2 is the steepest gradient in the
  
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M2_0_mach.png" title="Mach contour at M2.0" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M2_0_mach.png" title="Mach contour at M2.0" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M2_0_staticpressure.png" title="Static pressure at M2.0" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M2_0_staticpressure.png" title="Static pressure at M2.0" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M2_0_drag.png" title="Cd convergence at M2.0" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M2_0_drag.png" title="Cd convergence at M2.0" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -160,13 +160,13 @@ The transonic jump between Mach 0.7 and Mach 1.2 is the steepest gradient in the
  
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M3_0_mach.png" title="Mach contour at M3.0" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M3_0_mach.png" title="Mach contour at M3.0" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M3_0_staticpressure.png" title="Static pressure at M3.0" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M3_0_staticpressure.png" title="Static pressure at M3.0" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M3_0_drag.png" title="Cd convergence at M3.0" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/nosecone/conical/M3_0_drag.png" title="Cd convergence at M3.0" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -197,7 +197,3 @@ The transonic jump between Mach 0.7 and Mach 1.2 is the steepest gradient in the
 ---
  
 **Tools:** Python · SolidWorks · ANSYS SpaceClaim · ANSYS Meshing · ANSYS Fluent 2026 R1 · k-ω SST
- 
----
-**Disclaimer:**
-Portions of this work were completed with the assistance of Claude (Anthropic), an AI language model. AI tools were used to support tasks including coordinate generation, solver troubleshooting, and write-up drafting. All technical decisions — geometry selection, mesh parameters, boundary conditions, solver settings, and interpretation of results — were made independently by the author. All AI-assisted content was reviewed and verified for technical accuracy prior to inclusion.
