@@ -100,7 +100,3 @@ A **mesh independence study** is planned at ~500,000 cells (currently constraine
 ---
 
 **Tools:** MATLAB · SolidWorks · ANSYS Fluent 2026 R1 · k-ω SST · Roe-FDS
-
----
-**Disclaimer:**
-Portions of this work were completed with the assistance of Claude (Anthropic), an AI language model. AI tools were used to support tasks including document reformatting, code debugging, and write-up drafting. All technical decisions; including intake geometry, ramp angle selection, CFD setup, boundary conditions, and interpretation of results, were made independently by myself. All AI assisted or generated content was reviewed, verified, and edited for technical accuracy prior to inclusion.

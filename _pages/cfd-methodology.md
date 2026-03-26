@@ -3,7 +3,7 @@ layout: page
 title: CFD Methodology & Validation
 permalink: /cfd-methodology/
 description: The reasoning behind solver choices, turbulence modelling, meshing strategy, and validation approaches used across my CFD projects.
-nav: true
+nav: false
 nav_order: 4
 ---
 

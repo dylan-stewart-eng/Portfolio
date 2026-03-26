@@ -68,6 +68,3 @@ Images and CAD renders will be added as the hardware build progresses.
 
 **Tools:** Arduino · C++ · MPU6050 IMU · SolidWorks (in progress) · ANSYS Fluent (planned)
 
----
-**Disclaimer:**
-Portions of this write-up were completed with the assistance of Claude (Anthropic), an AI language model. All technical decisions, code architecture, and control system design were made independently by the author.
