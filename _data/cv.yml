@@ -99,7 +99,7 @@ cv:
       - name: CAD & Simulation
         level: Proficient
         icon: fa-solid fa-drafting-compass
-        keywords: "SolidWorks, MATLAB, Simulink, OpenRocket, RASAero II"
+        keywords: "SolidWorks, ANSYS Fluent, Simulink, OpenRocket, RASAero II"
 
       - name: Electronics & PCB Design
         level: Proficient

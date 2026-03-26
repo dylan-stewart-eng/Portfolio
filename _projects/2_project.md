@@ -39,7 +39,7 @@ The filter maintains a 2×2 error covariance matrix and tunes itself via three p
 
 ## Control Logic
 
-Four servos drive the fins AoA, paired in opposition so that a positive pitch correction deflects surfaces 1 & 3 one way and surfaces 2 & 4 the other — producing a net moment without inducing roll. The filtered angle is mapped directly to servo position:
+Four servos drive the fin angle of attack, paired in opposition so that a positive pitch correction deflects surfaces 1 & 3 one way and surfaces 2 & 4 the other — producing a net moment without inducing roll. The filtered angle is mapped directly to servo position:
 
 ```cpp
 int servoPos = map(filteredAngle, -90, 90, 0, 180);

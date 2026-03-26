@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Find projects I'm currently working on, or have completed here.
+description: Technical projects in aerodynamics, CFD, and control systems.
 nav: true
 nav_order: 3
 display_categories: [work, fun]

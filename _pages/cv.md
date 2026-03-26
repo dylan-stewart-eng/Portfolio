@@ -6,7 +6,7 @@ nav: true
 nav_order: 5
 cv_pdf: /assets/pdf/Curriculum Vitae (181225) # you can also use external links here
 cv_format: rendercv # options: rendercv, jsonresume
-description:
+description: A summary of my experience, education, and technical skills.
 toc:
   sidebar: left
 ---

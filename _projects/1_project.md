@@ -89,7 +89,7 @@ The 2D geometry was imported into **ANSYS Fluent 2026 R1** and simulated with:
 
 The CFD result comes in 3.2% below the analytical prediction, which is unnervingly close. The oblique shock theory is inviscid; it doesn't account for the turbulent boundary layer building up along the ramp surfaces. The total pressure contour makes this clear — there's a distinct low-P₀ wake clinging to the walls, which is the viscous loss the theory can't see.
 
-The shock positions in the Mach contour land close to where MATLAB predicted them, which is a nice spatial validation of the whole workflow from analytical design through to SolidWorks geometry to CFD mesh. However, this can be improved in future by extendng the cowl to catch the intersection of these shocks and hopefully, provide a slightly more efficient intake. Following on from that, the introduction of bleed air channels to remove low pressure, viscous, "dirty" air could increase the efficiency once more. I plan to incorporate these changes soon!
+The shock positions in the Mach contour land close to where MATLAB predicted them, which is a nice spatial validation of the whole workflow from analytical design through to SolidWorks geometry to CFD mesh. However, this can be improved in future by extending the cowl to catch the intersection of these shocks and hopefully, provide a slightly more efficient intake. Following on from that, the introduction of bleed air channels to remove low pressure, viscous, "dirty" air could increase the efficiency once more. I plan to incorporate these changes soon!
 
 ---
 
