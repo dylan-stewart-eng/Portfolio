@@ -119,4 +119,4 @@ The fin phase of the nosecone study will require a 3D quarter-body domain, which
 
 ---
 
-*Solver: ANSYS Fluent 2026 R1. Mesh: ANSYS Meshing. Geometry: SolidWorks / SpaceClaim.*
+*Solver: ANSYS Fluent 2026 R1. Mesh: ANSYS Meshing. Geometry: SolidWorks / SpaceClaim*
