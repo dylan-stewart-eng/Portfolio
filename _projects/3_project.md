@@ -48,7 +48,7 @@ Profile coordinates for the Von Kármán and Power Series geometries were genera
  
 ### Domain & Meshing
  
-All simulations use a 2D axisymmetric domain drawn in SpaceClaim. The fluid domain extends 1.5L upstream and 20L downstream of the nosecone tip, with a farfield height of 1,500 mm (15R) — sized to prevent shock reflection off the outer boundary at high Mach numbers.
+All simulations use a 2D axisymmetric domain drawn in SpaceClaim. The fluid domain extends 1.5L upstream and 20L downstream of the nosecone tip, with a farfield height of 1,500 mm (15R), sized to prevent shock reflection off the outer boundary at high Mach numbers.
  
 Named selections: `inlet`, `outlet`, `farfield` (all Pressure Far-Field), `axis`, `wall_nosecone`, `wall_base`.
  
