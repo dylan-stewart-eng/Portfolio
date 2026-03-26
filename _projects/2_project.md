@@ -4,7 +4,7 @@ title: Active Aerodynamics for an Actively Stable Amateur Rocket
 description: IMU-driven canard control system with Kalman filter attitude estimation for active roll and pitch stabilisation during flight.
 img: assets/img/project2.jpg
 importance: 2
-category: work
+category:
 giscus_comments: false
 ---
 
