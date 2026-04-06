@@ -55,7 +55,7 @@ I use **wall-resolved** meshing with a target y⁺ ≈ 1, corresponding to a fir
 
 This ensures the viscous sublayer is fully resolved rather than bridged with wall functions. Wall functions (y⁺ ~ 30–300) are acceptable for attached boundary layers but introduce significant error near separation and reattachment. Since base drag and shock-boundary layer interaction are central to my results, wall-resolved meshing is the correct choice despite the additional cell count.
 
-Inflation layers use [FILL IN: your layer count, growth rate, transition type] applied to all solid wall surfaces.
+Inflation layers use a 1.2 growth rate, with a 2 micron base layer applied to all solid wall surfaces.
 
 ### Domain Sizing
 
